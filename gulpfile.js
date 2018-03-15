@@ -7,7 +7,8 @@
 
 var gulp = require('gulp'),
     del = require('del'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    google_fonts = require('gulp-google-fonts');
 
 /**
  * Gulp is a toolkit for automating painful or time-consuming tasks.
@@ -35,7 +36,7 @@ var src = {
  *
  * Run: $ gulp - in the command line.
  */
-gulp.task('default', ['sass', 'js', 'pug', 'font-awesome']);
+gulp.task('default', ['sass', 'js', 'pug', 'font-awesome', 'google-fonts']);
 gulp.task('clean');
 
 /*
@@ -81,5 +82,16 @@ gulp.task('pug', function() {
  */
 gulp.task('font-awesome', function() {
     return gulp.src('node_modules/font-awesome/fonts/**.*')
+        .pipe(gulp.dest(build.fonts));
+});
+
+/*
+ * Download desired fonts from Google fonts.
+ *
+ * configuration file 'google-fonts.neon'
+ */
+gulp.task('google-fonts', function () {
+    return gulp.src('google-fonts.neon')
+        .pipe(google_fonts())
         .pipe(gulp.dest(build.fonts));
 });

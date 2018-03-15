@@ -15,6 +15,12 @@ body {
     background-color: $gray-100;
     margin-top: 1rem;
     margin-bottom: 2rem;
+
+    .container {
+        h1 {
+            font-family: 'Indie Flower', cursive;
+        }
+    }
 }
 
 /*
