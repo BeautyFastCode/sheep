@@ -1,0 +1,17 @@
+{
+  "name": "sheep",
+  "version": "0.1",
+  "description": "The Sheep Project.",
+  "main": "public/index.html",
+  "repository": "https://github.com/BeautyFastCode/sheep.git",
+  "author": "Bogumił Brzeziński <beautyfastcode@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "bootstrap": "^4.0.0",
+    "jquery": "1.9.1",
+    "popper.js": "^1.12.9"
+  }
+}
