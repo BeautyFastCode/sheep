@@ -35,7 +35,7 @@ var src = {
  *
  * Run: $ gulp - in the command line.
  */
-gulp.task('default', ['sass', 'js', 'pug']);
+gulp.task('default', ['sass', 'js', 'pug', 'font-awesome']);
 gulp.task('clean');
 
 /*
@@ -74,4 +74,12 @@ gulp.task('js', function () {
 gulp.task('pug', function() {
     gulp.src('templates/index.html')
         .pipe(gulp.dest(build.root));
+});
+
+/*
+ * Copy the Font Awesome fonts folder to build folder.
+ */
+gulp.task('font-awesome', function() {
+    return gulp.src('node_modules/font-awesome/fonts/**.*')
+        .pipe(gulp.dest(build.fonts));
 });
