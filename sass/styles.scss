@@ -1,0 +1,17 @@
+/*
+ * Import Bootstrap SASS
+ */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+/*
+ * Main styles.
+ */
+body {
+    background-color: $gray-100;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*
+ * Styles for components.
+ */
