@@ -1,3 +1,6 @@
+//-
+  The index page.
+
 doctype html
 html(lang="en")
     head
@@ -16,10 +19,13 @@ html(lang="en")
 
     body
         include _navbar
+
         .container
             h1
                 i(aria-hidden="true").fa.fa-home
                 span  Hello, sheep!
+
+        include _footer
 
     // Optional JavaScript
     // jQuery first, then Popper.js, then Bootstrap JS
