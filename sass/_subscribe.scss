@@ -1,0 +1,13 @@
+.subscribe {
+    h6 {
+        color: $white;
+    }
+
+    form {
+        .form-group {
+            .text-muted {
+                color: $white !important;
+            }
+        }
+    }
+}
