@@ -13,7 +13,6 @@
  */
 body {
     background-color: $gray-100;
-    margin-bottom: 2rem;
 
     .container {
         h1 {
@@ -27,3 +26,4 @@ body {
  */
 @import "navbar";
 @import "footer";
+@import "friends";
