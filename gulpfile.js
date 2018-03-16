@@ -8,7 +8,9 @@
 var gulp = require('gulp'),
     del = require('del'),
     sass = require('gulp-sass'),
-    google_fonts = require('gulp-google-fonts');
+    google_fonts = require('gulp-google-fonts'),
+    pug = require('gulp-pug')
+    ;
 
 /**
  * Gulp is a toolkit for automating painful or time-consuming tasks.
@@ -42,14 +44,14 @@ gulp.task('clean');
 /*
  * Clean the build folder.
  */
-gulp.task('clean', function () {
+gulp.task('clean', function() {
     return del(build.root);
 });
 
 /*
  * Compile sass to css and copy to destination folder.
  */
-gulp.task('sass', function () {
+gulp.task('sass', function() {
     return gulp.src(src.sass)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(build.css));
@@ -58,7 +60,7 @@ gulp.task('sass', function () {
 /*
  * Copy the JavaScripts to the build folder.
  */
-gulp.task('js', function () {
+gulp.task('js', function() {
     gulp.src('node_modules/jquery/jquery.min.js')
         .pipe(gulp.dest(build.js));
 
@@ -73,7 +75,10 @@ gulp.task('js', function () {
  * Compile pug to html and copy to destination folder.
  */
 gulp.task('pug', function() {
-    gulp.src('templates/index.html')
+    return gulp.src(src.pug)
+        .pipe(pug({
+            pretty: true
+        }))
         .pipe(gulp.dest(build.root));
 });
 
@@ -90,7 +95,7 @@ gulp.task('font-awesome', function() {
  *
  * configuration file 'google-fonts.neon'
  */
-gulp.task('google-fonts', function () {
+gulp.task('google-fonts', function() {
     return gulp.src('google-fonts.neon')
         .pipe(google_fonts())
         .pipe(gulp.dest(build.fonts));
