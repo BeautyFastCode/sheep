@@ -5,13 +5,15 @@ section.subscribe.text-center.bg-primary.text-light
     div.container
         h6 The fresh new sheep in every week.
         h2 Subscribe to receive more sheep.
-        form
-            div.row
-                div.form-group.col-5.offset-3
-                    input.form-control(type="email", placeholder="Your email address", aria-describedby="emailHelp")
-                    small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+        div.row
+            div.col-6.offset-3
+                form
+                    div.row.outline
+                        div.form-group.col-8
+                            input.form-control(type="email", placeholder="Your email address", aria-describedby="emailHelp")
+                            small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
 
-                div.col-1
-                    button.btn.btn-light
-                        i(aria-hidden="true").fa.fa-paper-plane
-                        span  Subscribe
+                        div.col-4
+                            button.btn.btn-light
+                                i(aria-hidden="true").fa.fa-paper-plane
+                                span  Subscribe
