@@ -9,8 +9,8 @@ var gulp = require('gulp'),
     del = require('del'),
     sass = require('gulp-sass'),
     google_fonts = require('gulp-google-fonts'),
-    pug = require('gulp-pug')
-    ;
+    pug = require('gulp-pug'),
+    live_reload = require('gulp-livereload');
 
 /**
  * Gulp is a toolkit for automating painful or time-consuming tasks.
@@ -40,6 +40,7 @@ var src = {
  */
 gulp.task('default', ['sass', 'js', 'pug', 'font-awesome', 'google-fonts']);
 gulp.task('clean');
+gulp.task('watch');
 
 /*
  * Clean the build folder.
@@ -54,7 +55,8 @@ gulp.task('clean', function() {
 gulp.task('sass', function() {
     return gulp.src(src.sass)
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(build.css));
+        .pipe(gulp.dest(build.css))
+        .pipe(live_reload());
 });
 
 /*
@@ -79,7 +81,8 @@ gulp.task('pug', function() {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest(build.root));
+        .pipe(gulp.dest(build.root))
+        .pipe(live_reload());
 });
 
 /*
@@ -99,4 +102,17 @@ gulp.task('google-fonts', function() {
     return gulp.src('google-fonts.neon')
         .pipe(google_fonts())
         .pipe(gulp.dest(build.fonts));
+});
+
+/*
+ * Watches for changes in source files,
+ * if something change run proper task.
+ */
+gulp.task('watch', function () {
+
+    gulp.watch(src.pug, ['pug']);
+    gulp.watch(src.sass, ['sass']);
+
+    // Create LiveReload server
+    live_reload.listen();
 });
