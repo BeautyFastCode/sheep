@@ -13,7 +13,6 @@
  */
 body {
     background-color: $gray-100;
-    margin-top: 1rem;
     margin-bottom: 2rem;
 
     .container {
@@ -24,5 +23,6 @@ body {
 }
 
 /*
- * Styles for components.
+ * Styles for parts, components etc.
  */
+@import "navbar";
