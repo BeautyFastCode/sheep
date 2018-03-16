@@ -12,8 +12,6 @@
  * Main styles.
  */
 body {
-    background-color: $gray-100;
-
     .container {
         h1 {
             font-family: 'Indie Flower', cursive;
@@ -26,6 +24,7 @@ body {
  */
 @import "navbar";
 @import "section";
+@import "info";
 @import "subscribe";
 @import "friends";
 @import "footer";
