@@ -13,12 +13,26 @@ $time: 0.5s;
         -webkit-transition: all $time ease-in-out;
         -moz-transition: all $time ease-in-out;
         transition: all $time ease-in-out;
+
+        svg {
+            position: relative;
+            top: 1rem;
+            right: -0.7rem;
+
+            fill: $white;
+            fill-rule: evenodd;
+
+            -webkit-transition: all $time ease-in-out;
+            -moz-transition: all $time ease-in-out;
+            transition: all $time ease-in-out;
+        }
     }
 
     -webkit-transition: background $time ease-in-out, height $time ease-in-out;
     -moz-transition: background $time ease-in-out, height $time ease-in-out;
     transition: background $time ease-in-out, height $time ease-in-out;
 }
+
 .navbar-fixed-top {
     height: 3.5rem;
 
@@ -28,6 +42,10 @@ $time: 0.5s;
 
     a.navbar-brand {
         font-size: 2rem;
+
+        svg {
+            width: 56px;
+            height: 37px;
+        }
     }
 }
-
