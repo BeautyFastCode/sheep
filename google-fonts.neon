@@ -1,5 +1,5 @@
 fonts:
-    - #Here starts font declaration
+    - # Here starts font declaration
         family:    Indie Flower
         variants:
             - 400
