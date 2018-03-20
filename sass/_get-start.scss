@@ -3,6 +3,14 @@
         .row {
             .big-icon {
                 font-size: 8rem;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 6rem;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
             }
         }
     }

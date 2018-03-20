@@ -16,7 +16,10 @@
                 .text-muted {
                     color: $white !important;
                 }
-                margin-bottom: 0;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 0;
+                }
             }
         }
     }
