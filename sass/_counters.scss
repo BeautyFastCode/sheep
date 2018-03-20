@@ -1,6 +1,15 @@
 .counters {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
 
     h3 {
         font-weight: bold;
