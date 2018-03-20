@@ -49,3 +49,17 @@ $time: 0.5s;
         }
     }
 }
+
+.collapse.show {
+    background-color: $dark;
+
+    padding: 1rem;
+    text-align: right;
+
+    .btn {
+        display: inline-block;
+
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
