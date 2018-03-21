@@ -1,7 +1,0 @@
-fonts:
-    - # Here starts font declaration
-        family:    Indie Flower
-        variants:
-            - 400
-        subsets:
-            - latin
