@@ -2,9 +2,9 @@
 
 ---
 
-## Live demo.
+## Live demo on GitHub Pages.
 
-- Click this link. 
+- [Click this link](https://beautyfastcode.github.io/sheep/). 
 
 ---
 

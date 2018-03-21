@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     google_fonts = require('gulp-google-fonts'),
     pug = require('gulp-pug'),
-    live_reload = require('gulp-livereload');
+    live_reload = require('gulp-livereload'),
+    gh_pages = require('gulp-gh-pages');
 
 /**
  * Gulp is a toolkit for automating painful or time-consuming tasks.
@@ -41,6 +42,7 @@ var src = {
 gulp.task('default', ['sass', 'js', 'pug', 'font-awesome', 'google-fonts']);
 gulp.task('clean');
 gulp.task('watch');
+gulp.task('deploy');
 
 /*
  * Clean the build folder.
@@ -115,4 +117,12 @@ gulp.task('watch', function () {
 
     // Create LiveReload server
     live_reload.listen();
+});
+
+/*
+ * Deploy build (from public folder) to the Github pages.
+ */
+gulp.task('deploy', function() {
+    return gulp.src('public/**/*')
+        .pipe(gh_pages());
 });
