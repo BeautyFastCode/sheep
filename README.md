@@ -1,8 +1,12 @@
 # Project Sheep - Fully Responsive HTML5 One-Page Website Template.
 
+---
+
 ## Live demo.
 
 - Click this link. 
+
+---
 
 ## Technologies used.
 
@@ -29,8 +33,12 @@ List of tools used to build this project:
 - `Firefox` and `Chrome` - web browsers,
 - [`Kubuntu`](https://kubuntu.org/) - operating system.
 
-## Screenshots.
-
-
 ---
 
+## Screenshots.
+
+1 | 2 | 3 | 4
+------|------|------|------
+![1](screenshots/project-sheep-1.png) | ![2](screenshots/project-sheep-2.png) | ![3](screenshots/project-sheep-3.png) | ![4](screenshots/project-sheep-4.png)
+
+---
