@@ -1,6 +1,5 @@
 {
   "name": "sheep",
-  "version": "0.1",
   "description": "The Sheep Project.",
   "main": "public/index.html",
   "repository": "https://github.com/BeautyFastCode/sheep.git",
